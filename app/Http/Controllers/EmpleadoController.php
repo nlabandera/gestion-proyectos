@@ -10,9 +10,9 @@ class EmpleadoController extends Controller
 {
     function index(){
 
-    	$empleado = Empleado::all();
+    	$empleados = Empleado::all();
 
-    	return view('empleados.index',['empleado'=>$empleado]);
+    	return view('empleados.index',['empleados'=>$empleados]);
 
     }
 

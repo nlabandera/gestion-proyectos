@@ -23,10 +23,10 @@
                         <a class="nav-link" href="{{route('empleados.index')}}">Empleados</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Proyectos</a>
+                        <a class="nav-link" href="{{route('proyectos.index')}}">Proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Departamentos</a>
+                        <a class="nav-link" href="{{route('departamentos.index')}}">Departamentos</a>
                     </li>
                 </ul>
             </nav>
