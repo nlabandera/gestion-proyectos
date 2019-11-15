@@ -12,6 +12,8 @@ class EmpleadosSeeder extends Seeder
      */
     public function run()
     {
+       
+        
         DB::table('empleados')->insert([
             'nombre' => 'Nerea',
             'apellido' => 'Labandera',
@@ -24,5 +26,6 @@ class EmpleadosSeeder extends Seeder
             'email' => 'kintxausti@hotmail.com',
             'telefono'=>'655214587'
         ]);
+        
     }
 }

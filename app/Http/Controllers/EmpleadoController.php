@@ -8,13 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class EmpleadoController extends Controller
 {
-    function show(){
+    function index(){
 
-    	$empleado = Empleado::find($id);
-    	
-    	//$info = Empleado::All();
+    	$empleado = Empleado::all();
 
-    	return view('/empleados/index',['empleado'=>$empleado]);
+    	return view('empleados.index',['empleado'=>$empleado]);
 
     }
 
