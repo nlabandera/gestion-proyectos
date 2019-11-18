@@ -24,7 +24,7 @@
         <td>{{$proyecto->fechainicio}}</td>
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
-        <td>{{$proyecto->empleado}}</td>
+        <td>{{$proyecto->empleado->nombre}}</td>
       </tr>
       @endforeach
     </table>

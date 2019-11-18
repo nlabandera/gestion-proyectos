@@ -10,6 +10,6 @@ class Empleado extends Model
 
     public function proyecto(){
 
-    	return $this->belongsto('App\Proyecto','id','empleado_id');
+    	return $this->hasOne('App\Proyecto');
     }
 }

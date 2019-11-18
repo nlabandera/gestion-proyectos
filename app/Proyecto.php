@@ -8,8 +8,8 @@ class Proyecto extends Model
 {
     protected $table = 'proyectos';
 
-    public function proyecto(){
+    public function empleado(){
 
-    	return $this->hasOne('App\Empleado');
+    	return $this->belongsTo('App\Empleado');
     }
 }
