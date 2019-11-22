@@ -8,8 +8,14 @@ use Illuminate\Support\Facades\DB;
 
 class DepartamentoController extends Controller
 {
-   function index(){
+   public function index(){
    		$departamentos=Departamento::all();
     	return view('departamentos.index',['departamentos'=>$departamentos]);
-    }
+   }
+   public function show($id){
+
+    	$dpto = Departamento::find($id);
+        return view('departamentos.departamento', ['dpto'=>$dpto]);
+
+   }
 }

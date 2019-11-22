@@ -10,11 +10,13 @@
     <tr>
       <th>Id</th>
       <th>Nombre</th>
+      <th></th>
     </tr>
     @foreach($departamentos as $departamento)
     <tr>
       <td>{{$departamento->id}}</td>
       <td>{{$departamento->nombre}}</td>
+      <td><a href="{{route('departamentos.departamento',$departamento->id)}}">Más info</a></td>
     </tr>
     @endforeach
 

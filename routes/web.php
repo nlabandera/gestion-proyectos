@@ -23,3 +23,4 @@ Route::get('proyectos','ProyectoController@index')->name('proyectos.index');
 
 //Departamentos
 Route::get('departamentos','DepartamentoController@index')->name('departamentos.index');
+Route::get('departamentos/{id}','DepartamentoController@show')->name('departamentos.departamento');
