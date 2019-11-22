@@ -17,7 +17,7 @@
   </tr>
   <tr>
     <th>Departamento</th>
-    <td>{{$empleadoInfo->departamento->nombre}}</td>
+    <td><a href="{{route('departamentos.departamento',$empleadoInfo->departamento->id)}}">{{$empleadoInfo->departamento->nombre}}</a></td>
   </tr>
 </table>
 
