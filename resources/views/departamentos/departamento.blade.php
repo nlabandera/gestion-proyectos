@@ -9,7 +9,7 @@
 <h4>Empleados</h4>
 <ul>
   @foreach ($dpto->empleados as $empleado)
-  <li>{{$empleado->nombre}}</li>
+  <li><a href="{{route('empleados.empleado',$empleado->id)}}">{{$empleado->nombre}}</a></li>
   @endforeach
 </ul>
 
