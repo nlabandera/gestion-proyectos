@@ -14,4 +14,9 @@ class ProyectoController extends Controller
 
     	return view('proyectos.index',['proyectos'=>$proyectos]);
     }
+    public function show($id){
+    	$proyectoInfo = Proyecto::find($id);
+
+    	return view('proyectos.proyecto',['proyectoInfo'=>$proyectoInfo]);
+    }
 }
