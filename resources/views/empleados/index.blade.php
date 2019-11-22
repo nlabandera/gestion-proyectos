@@ -14,6 +14,7 @@
         <th>Email</th>
         <th>Telefono</th>
         <th>Departamento</th>
+        <th></th>
       </tr>
       @foreach ($empleados as $empleado)
       <tr>
@@ -25,6 +26,7 @@
         @if(!is_null($empleado->departamento))
         <td>{{$empleado->departamento->nombre}}</td>
         @endif
+        <td><a href="{{route('empleados.empleado',$empleado->id)}}">Más info</a></td>
       </tr>
       @endforeach
 
