@@ -8,7 +8,7 @@ class Departamento extends Model
 {
     protected $table = 'departamentos';
 
-    public function empleado(){
+    public function empleados(){
 
     	return $this->hasMany('App\Empleado');
     }
