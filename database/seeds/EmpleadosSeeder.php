@@ -12,8 +12,13 @@ class EmpleadosSeeder extends Seeder
      */
     public function run()
     {
+        /*Crear empleados con el tinker
+            php artisan make:factory EmpleadoFactory --model=Empleado
+            Se crea un Factory en el que hay que insertar los atributos de Empleado
+        */
+        factory(App\Empleado::class,2)->create();
         
-        DB::table('empleados')->insert([
+        /*DB::table('empleados')->insert([
             'nombre' => 'Nerea',
             'apellido' => 'Labandera',
             'email' => 'nlabandera@hotmail.com',
@@ -74,6 +79,6 @@ class EmpleadosSeeder extends Seeder
             'email' => 'jaranburu@hotmail.com',
             'telefono'=>'698777552'
         ]);
-        
+        */
     }
 }

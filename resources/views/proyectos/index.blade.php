@@ -6,6 +6,7 @@
 
   <h2>Proyectos</h2>
 
+
     <table>
       <tr>
         <th>Id</th>
@@ -28,5 +29,6 @@
       </tr>
       @endforeach
     </table>
+    <a href=""><button>Nuevo Proyecto</button></a>
 
 @endsection
