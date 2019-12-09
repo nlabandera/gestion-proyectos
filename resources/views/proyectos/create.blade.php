@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Nuevo proyecto</title>
-	<meta charset="utf-8">
-</head>
+@extends('layouts.app')
+
+@section('title', 'UD5. ORM')
+
+@section('content')
 <body>
 	<h1>Introduce la información para un nuevo proyecto</h1>
-	<form method="" action="">
+	<form method="get" action="{{route('proyectos.index')}}">
 		@csrf
 		<label>Nombre</label>
 		<input type="text" name="new_proyect"><br>
@@ -16,10 +15,14 @@
 		<input type="data" name="new_startdate"><br>
 		<label>Fecha fin</label>
 		<input type="data" name="new_enddate"><br>
+		<label>Horas estimadas</label>
+		<input type="data" name="new_horas"><br>
 		<label>Responsable</label>
 		<input type="text" name="new_resp"><br><br>
+		
 		<input type="submit" value="Añadir">
+
 	</form>
 
-</body>
-</html>
+
+@endsection

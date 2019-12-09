@@ -25,10 +25,10 @@
         <td>{{$proyecto->fechainicio}}</td>
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
-        <td><a href="{{route('empleados.empleado',$proyecto->empleado->id)}}">{{$proyecto->empleado->nombre}}</a></td>
+       <td><a href="{{route('empleados.empleado',$proyecto->empleado->id)}}">{{$proyecto->empleado->nombre}}</a></td>
       </tr>
       @endforeach
     </table>
-    <a href=""><button>Nuevo Proyecto</button></a>
+    <a href="{{route('proyectos.create')}}"><button>Nuevo Proyecto</button></a>
 
 @endsection

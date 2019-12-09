@@ -3,26 +3,27 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Proyecto;
-use Illuminate\Support\Facades\DB;
 
-class ProyectoController extends Controller
+class PlantillaController extends Controller
 {
-    public function index(){
-
-    	$proyectos = Proyecto::all();
-
-    	return view('proyectos.index',['proyectos'=>$proyectos]);
-    }
-    public function show($id){
-    	$proyectoInfo = Proyecto::find($id);
-
-    	return view('proyectos.proyecto',['proyectoInfo'=>$proyectoInfo]);
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
     }
 
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
-        return view ('proyectos.create');
+        //
     }
 
     /**
@@ -33,19 +34,7 @@ class ProyectoController extends Controller
      */
     public function store(Request $request)
     {
-        $proyecto=new Proyecto();
-
-        $proyecto->nombre=$request->new_proyect;
-        $proyecto->titulo=$request->new_title;
-        $proyecto->fechainicio=$request->new_startdate;
-        $proyecto->fechafin=$request->new_enddate;
-        $Proyecto->horasestimadas=$request->new_horas;
-        $proyecto->empleado_id=$request->new_resp;
-
-        $proyecto->save();
-
-        return redirect('/');
-        //return redirect()->route('proyectos.proyecto',$proyecto->empleado_id);
+        //
     }
 
     /**
@@ -54,7 +43,17 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    public function show($id)
+    {
+        //
+    }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function edit($id)
     {
         //

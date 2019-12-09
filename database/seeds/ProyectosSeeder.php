@@ -12,7 +12,7 @@ class ProyectosSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Proyecto::class,2)->create();
+        factory(App\Proyecto::class,5)->create();
        /* $fecha = date('Y/m/d');
   
         for ($i=0;$i<5;$i++) {

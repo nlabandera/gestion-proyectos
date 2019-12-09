@@ -16,7 +16,7 @@ class EmpleadosSeeder extends Seeder
             php artisan make:factory EmpleadoFactory --model=Empleado
             Se crea un Factory en el que hay que insertar los atributos de Empleado
         */
-        factory(App\Empleado::class,2)->create();
+        factory(App\Empleado::class,10)->create();
         
         /*DB::table('empleados')->insert([
             'nombre' => 'Nerea',

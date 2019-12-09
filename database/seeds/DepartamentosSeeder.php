@@ -11,7 +11,7 @@ class DepartamentosSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Departamento::class,2)->create();
+        factory(App\Departamento::class,3)->create();
         /*DB::table('departamentos')->insert([
             'nombre' => 'I+d+i'
         ]);
