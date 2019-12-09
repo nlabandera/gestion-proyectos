@@ -15,9 +15,10 @@ class ProyectoController extends Controller
     	return view('proyectos.index',['proyectos'=>$proyectos]);
     }
     public function show($id){
-    	$proyectoInfo = Proyecto::find($id);
+    	
+        $proyectoshow = Proyecto::find($id);
 
-    	return view('proyectos.proyecto',['proyectoInfo'=>$proyectoInfo]);
+    	return view('proyectos.proyecto',['proyectoshow'=>$proyectoshow]);
     }
 
     public function create()
@@ -33,18 +34,18 @@ class ProyectoController extends Controller
      */
     public function store(Request $request)
     {
-        $proyecto=new Proyecto();
+        $proyecto = new Proyecto();
 
-        $proyecto->nombre=$request->new_proyect;
-        $proyecto->titulo=$request->new_title;
-        $proyecto->fechainicio=$request->new_startdate;
-        $proyecto->fechafin=$request->new_enddate;
-        $Proyecto->horasestimadas=$request->new_horas;
-        $proyecto->empleado_id=$request->new_resp;
+        $proyecto->nombre = request('p_nombre');
+        $proyecto->titulo = request('p_titulo');
+        $proyecto->fechainicio = request('p_fechainicio');
+        $proyecto->fechafin = request('p_fechafin');
+        $proyecto->horasestimadas = request('p_horasestimadas');
+        $proyecto->empleado_id = request('p_empleado_id');
 
         $proyecto->save();
 
-        return redirect('/');
+        return redirect('proyectos');
         //return redirect()->route('proyectos.proyecto',$proyecto->empleado_id);
     }
 

@@ -4,28 +4,28 @@
 
 @section('content')
 
-<h2>Proyecto "{{$proyectoInfo->nombre}}"</h2>
+<h2>Proyecto "{{$proyectoshow->nombre}}"</h2>
 
 <table>
   <tr>
     <th>Titulo</th>
-    <td>{{$proyectoInfo->titulo}}</td>
+    <td>{{$proyectoshow->titulo}}</td>
   </tr>
   <tr>
     <th>Fecha Inicio</th>
-    <td>{{$proyectoInfo->fechainicio}}</td>
+    <td>{{$proyectoshow->fechainicio}}</td>
   </tr>
   <tr>
     <th>Fecha fin</th>
-    <td>{{$proyectoInfo->fechafin}}</td>
+    <td>{{$proyectoshow->fechafin}}</td>
   </tr>
   <tr>
     <th>Horas estimadas</th>
-    <td>{{$proyectoInfo->horasestimadas}}</td>
+    <td>{{$proyectoshow->horasestimadas}}</td>
   </tr>
   <tr>
     <th>Responsable</th>
-    <td><a href="{{route('empleados.empleado',$proyectoInfo->empleado->id)}}">{{$proyectoInfo->empleado->nombre}}</a></td>
+    <td><a href="{{route('empleados.empleado',$proyectoshow->empleado->id)}}">{{$proyectoshow->empleado->nombre}}</a></td>
   </tr>
 </table>
 
