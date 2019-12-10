@@ -59,7 +59,9 @@ class ProyectoController extends Controller
 
     public function edit($id)
     {
-        //
+        $proyectoedit = Proyecto::find($id);
+
+        return view('proyectos.edit',['proyectoedit'=>$proyectoedit]);
     }
 
     /**
@@ -71,12 +73,21 @@ class ProyectoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        // Busca el producto
-        //$product = Product::find($id);
-        // Actualiza el stock
-        //$product->stock = $request->input('stock');
+        // Busca
+        
+        $proyectoupdate = Proyecto::find($id);
+        
+        // Actualiza
+        
+        $proyectoupdate->titulo = $request->input('titulo');
+        $proyectoupdate->fechainicio = $request->input('fechainicio');
+        $proyectoupdate->fechafin = $request->input('fechafin');
+        $proyectoupdate->horasestimadas = $request->input('horasestimadas');
+        $proyectoupdate->empleado_id = $request->input('empleado_id');
+        
         // Lo guarda
-        //$product->save();
+        
+        $proyectoupdate->save();
         return redirect('proyectos');
     }
 

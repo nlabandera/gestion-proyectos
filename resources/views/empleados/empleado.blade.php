@@ -19,6 +19,12 @@
     <th>Departamento</th>
     <td><a href="{{route('departamentos.departamento',$empleadoInfo->departamento->id)}}">{{$empleadoInfo->departamento->nombre}}</a></td>
   </tr>
+  @if(!is_null($empleadoInfo->proyecto))
+  <tr>
+    <th>Proyecto</th>
+    <td><a href="{{route('proyectos.proyecto',$empleadoInfo->proyecto->id)}}">{{$empleadoInfo->proyecto->nombre}}</a></td>
+  </tr>
+  @endif
 </table>
 
 @endsection

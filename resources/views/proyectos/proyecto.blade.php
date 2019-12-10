@@ -33,9 +33,9 @@
   @method('DELETE')
   <button type="submit">Eliminar proyecto</button>
 </form>
-<form action="" method="">
+<form action="{{route('proyectos.edit',$proyectoshow->id)}}" method="get">
   @csrf
-  @method('PUT');
+  @method('PUT')
   <button type="submit">Editar proyecto</button>
 </form>
 
