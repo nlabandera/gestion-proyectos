@@ -28,5 +28,15 @@
     <td><a href="{{route('empleados.empleado',$proyectoshow->empleado->id)}}">{{$proyectoshow->empleado->nombre}}</a></td>
   </tr>
 </table>
+<form action="{{route('proyectos.destroy',$proyectoshow->id)}}" method="post">
+  @csrf
+  @method('DELETE')
+  <button type="submit">Eliminar proyecto</button>
+</form>
+<form action="" method="">
+  @csrf
+  @method('PUT');
+  <button type="submit">Editar proyecto</button>
+</form>
 
 @endsection

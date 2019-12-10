@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Proyecto;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\ProyectoRequest;
 
 class ProyectoController extends Controller
 {
@@ -32,7 +33,7 @@ class ProyectoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProyectoRequest $request)
     {
         $proyecto = new Proyecto();
 
@@ -46,7 +47,7 @@ class ProyectoController extends Controller
         $proyecto->save();
 
         return redirect('proyectos');
-        //return redirect()->route('proyectos.proyecto',$proyecto->empleado_id);
+        
     }
 
     /**
@@ -70,7 +71,13 @@ class ProyectoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Busca el producto
+        //$product = Product::find($id);
+        // Actualiza el stock
+        //$product->stock = $request->input('stock');
+        // Lo guarda
+        //$product->save();
+        return redirect('proyectos');
     }
 
     /**
@@ -81,6 +88,9 @@ class ProyectoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Proyecto::destroy($id);
+        return redirect('proyectos');
+
+
     }
 }
