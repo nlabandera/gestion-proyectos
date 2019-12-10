@@ -25,6 +25,16 @@
     <td><a href="{{route('proyectos.proyecto',$empleadoInfo->proyecto->id)}}">{{$empleadoInfo->proyecto->nombre}}</a></td>
   </tr>
   @endif
+  @if(!is_null($empleadoInfo->proyectos))
+  <tr>
+    <th>Colabora en: </th>
+    <td>
+      @foreach($empleadoInfo->proyectos as $proyecto)
+      <a href="{{route('proyectos.proyecto', $proyecto->id)}}">{{$proyecto->nombre}}</a>,
+      @endforeach
+    </td>
+  </tr>
+  @endif
 </table>
 
 @endsection

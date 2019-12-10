@@ -12,6 +12,6 @@ $factory->define(Proyecto::class, function (Faker $faker) {
         'fechainicio' => $faker->date($format = 'Y-m-d', $min = 'now'),
         'fechafin' => $faker->date($format = 'Y-m-d', $max = '3 months'),
         'horasestimadas' => $faker->numberBetween($min = 100, $max = 9000),
-        'empleado_id' => $faker->numberBetween($min = 11, $max = 16)
+        'empleado_id' => $faker->numberBetween($min = 1, $max = 10)
     ];
 });

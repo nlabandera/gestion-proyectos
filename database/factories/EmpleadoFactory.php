@@ -10,7 +10,8 @@ $factory->define(Empleado::class, function (Faker $faker) {
         'nombre' => $faker->firstName,
         'apellido' => $faker->lastName,
         'email' => $faker->email,
-        'telefono' => $faker->phoneNumber
+        'telefono' => $faker->phoneNumber,
+        'departamento_id'=>$faker->numberBetween($min = 1, $max = 3)
 
     ];
 });
