@@ -17,9 +17,15 @@ Route::get('/', function () {
 // Empleados
 Route::get('empleados','EmpleadoController@index')->name('empleados.index');
 Route::get('empleados/{id}','EmpleadoController@show')->name('empleados.empleado');
+Route::get('empleados/create','EmpleadoController@create')->name('empleados.create');
+Route::get('empleados/{id}/edit','EmpleadoController@edit')->name('empleados.edit');
+Route::put('empleados/{id}','EmpleadoController@update')->name('empleados.update');
+Route::delete('empleados/{id}','EmpleadoController@destroy')->name('empleados.destroy');
+Route::post('empleados','EmpleadoController@store')->name('empleados.store');
 
 // Proyectos
 Route::get('proyectos','ProyectoController@index')->name('proyectos.index');
+
 Route::get('proyectos/proyecto/{id}','ProyectoController@show')->name('proyectos.proyecto');
 Route::get('proyectos/create','ProyectoController@create')->name('proyectos.create');
 Route::get('proyectos/store','ProyectoController@store')->name('proyectos.store');
