@@ -33,6 +33,9 @@ Route::delete('proyectos/destroy/{id}','ProyectoController@destroy')->name('proy
 Route::get('proyectos/proyecto/{id}/edit','ProyectoController@edit')->name('proyectos.edit');
 Route::put('proyectos/proyecto/{id}','ProyectoController@update')->name('proyectos.update');
 
+//Proyectos actuales
+Route::get('proyectosactuales','ProyectoActualController@index')->name('proyectos.actualindex');
+
 //Departamentos
 Route::get('departamentos','DepartamentoController@index')->name('departamentos.index');
 Route::get('departamentos/{id}','DepartamentoController@show')->name('departamentos.departamento');
