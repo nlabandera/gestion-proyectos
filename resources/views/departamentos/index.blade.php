@@ -10,13 +10,15 @@
     <tr>
       <th>Id</th>
       <th>Nombre</th>
-      <th></th>
+      <th>Jefe</th>
     </tr>
     @foreach($departamentos as $departamento)
     <tr>
-      <td>{{$departamento->id}}</td>
+      <td><a href="{{route('departamentos.departamento',$departamento->id)}}">{{$departamento->id}}</a></td>
       <td>{{$departamento->nombre}}</td>
-      <td><a href="{{route('departamentos.departamento',$departamento->id)}}">Más info</a></td>
+      @if(!is_null($departamento->jefe))
+      <td><a href="{{route('empleados.empleado',$departamento->jefe->id)}}">{{$departamento->jefe->id}}</a></td>
+      @endif
     </tr>
     @endforeach
 

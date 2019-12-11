@@ -29,12 +29,22 @@
   <tr>
     <th>Colabora en: </th>
     <td>
-      @foreach($empleadoInfo->proyectos as $proyecto)
-      <a href="{{route('proyectos.proyecto', $proyecto->id)}}">{{$proyecto->nombre}}</a>
-      @endforeach
-    </td>
-  </tr>
-  @endif
-</table>
+      <ul>
+        @foreach($empleadoInfo->proyectos as $proyecto)
+        <a href="{{route('proyectos.proyecto', $proyecto->id)}}"><li>{{$proyecto->nombre}}</li></a>
+        @endforeach
+      </td>
+    </tr>
+    @endif
+    
+    @if(!is_null($empleadoInfo->jefede))
+    <tr>
+      <th>Jefe de: </th>
+      <td>
+        <a href="{{route('departamentos.departamento', $empleadoInfo->jefede->id)}}">{{$empleadoInfo->jefede->nombre}}</a>
+      </td>
+    </tr>
+    @endif
+  </table>
 
-@endsection
+  @endsection

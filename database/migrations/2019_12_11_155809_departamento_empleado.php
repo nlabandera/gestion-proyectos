@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class EmpleadoDepartamento extends Migration
+class DepartamentoEmpleado extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,8 @@ class EmpleadoDepartamento extends Migration
      */
     public function up()
     {
-        Schema::table('empleados', function(Blueprint $table){
-            $table->integer('departamento_id')->nullable();
-            //$table->integer('jefede_id');
+        Schema::table('departamentos', function(Blueprint $table){
+            $table->integer('empleado_id')->nullable();
         });
     }
 
@@ -26,9 +25,8 @@ class EmpleadoDepartamento extends Migration
      */
     public function down()
     {
-        Schema::table('empleados', function (Blueprint $table) {
-            $table->dropColumn(['departamento_id']);
-            //$table->dropColumn('jefede_id');
+        Schema::table('departamentos', function (Blueprint $table) {
+            $table->dropColumn(['empleado_id']);
         });
     }
 }

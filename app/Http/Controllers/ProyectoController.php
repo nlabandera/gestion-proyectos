@@ -37,12 +37,12 @@ class ProyectoController extends Controller
     {
         $proyecto = new Proyecto();
 
-        $proyecto->nombre = request('p_nombre');
-        $proyecto->titulo = request('p_titulo');
-        $proyecto->fechainicio = request('p_fechainicio');
-        $proyecto->fechafin = request('p_fechafin');
-        $proyecto->horasestimadas = request('p_horasestimadas');
-        $proyecto->empleado_id = request('p_empleado_id');
+        $proyecto->nombre = request('nombre');
+        $proyecto->titulo = request('titulo');
+        $proyecto->fechainicio = request('fechainicio');
+        $proyecto->fechafin = request('fechafin');
+        $proyecto->horasestimadas = request('horasestimadas');
+        $proyecto->empleado_id = request('empleado_id');
 
         $proyecto->save();
 
@@ -71,7 +71,7 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProyectoRequest $request, $id)
     {
         // Busca
         

@@ -27,6 +27,15 @@
     <th>Responsable</th>
     <td><a href="{{route('empleados.empleado',$proyectoshow->empleado->id)}}">{{$proyectoshow->empleado->nombre}}</a></td>
   </tr>
+  <tr>
+    <th>Colaboradores: </th>
+    <td>
+      <ul>
+      @foreach($proyectoshow->empleados as $empleado)
+      <a href="{{route('empleados.empleado', $empleado->id)}}"><li>{{$empleado->nombre}}</li></a>
+      @endforeach
+    </td>
+  </tr>
 </table>
 <form action="{{route('proyectos.destroy',$proyectoshow->id)}}" method="post">
   @csrf

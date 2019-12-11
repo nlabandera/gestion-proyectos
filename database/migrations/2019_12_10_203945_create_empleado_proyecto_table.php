@@ -28,6 +28,6 @@ class CreateEmpleadoProyectoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('empleado_proyectos');
+        Schema::dropIfExists('empleado_proyecto');
     }
 }

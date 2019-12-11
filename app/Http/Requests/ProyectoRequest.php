@@ -24,10 +24,13 @@ class ProyectoRequest extends FormRequest
     public function rules()
     {
         return [
-            'p_nombre' => 'required|min:2|max:15',
-            'p_titulo'=>'required|min:2|max:45',
-            'p_fechainicio'=>'required',
-            //'telf'=>'required:regex:/^[0-9]$/'
+            'nombre' => 'required|min:2|max:15|string',
+            'titulo'=>'required|min:2|max:45|string',
+            'fechainicio'=>'required|date',
+            'fechafin' => 'required|date|after:fechainicio',
+            'horasestimadas' => 'required|numeric',
+            'responsable' => 'required|min:1|max:10|numeric'
+            
         ];
     }
 }

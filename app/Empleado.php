@@ -19,4 +19,7 @@ class Empleado extends Model
     public function proyectos(){
     	return $this->belongsToMany('App\Proyecto');
     }
+    public function jefede(){
+        return $this->hasOne('App\Departamento');
+    }
 }

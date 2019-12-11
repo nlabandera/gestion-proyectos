@@ -13,6 +13,13 @@
   @endforeach
 </ul>
 
+<h4>Jefe</h4>
+@if(!is_null($dpto->jefe))
+
+<a href="{{route('empleados.empleado',$dpto->jefe->id)}}">
+	<span>{{$dpto->jefe->nombre}}</span>
+</a>
+@endif
 
 
 @endsection

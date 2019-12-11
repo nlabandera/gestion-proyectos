@@ -11,15 +11,18 @@ class DepartamentosSeeder extends Seeder
      */
     public function run()
     {
-        factory(App\Departamento::class,3)->create();
-        /*DB::table('departamentos')->insert([
-            'nombre' => 'I+d+i'
+        //factory(App\Departamento::class,3)->create();
+        DB::table('departamentos')->insert([
+            'nombre' => 'I+d+i',
+            'empleado_id'=>1
         ]);
         DB::table('departamentos')->insert([
-            'nombre' => 'Desarrollo'
+            'nombre' => 'Contabilidad',
+            'empleado_id'=>2
         ]);
         DB::table('departamentos')->insert([
-            'nombre' => 'Administracion'
-        ]);*/
+            'nombre' => 'Administracion',
+            'empleado_id'=>3
+        ]);
     }
 }
