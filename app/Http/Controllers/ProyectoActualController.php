@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Proyecto;
+
+use Carbon\Carbon;
 
 class ProyectoActualController extends Controller
 {
@@ -14,11 +17,16 @@ class ProyectoActualController extends Controller
      */
     public function index()
     {
-        $proyectoactuals = DB::table('proyectos')
+        /*$proyectoactuals = DB::table('proyectos')
         ->where('id', '>', 3)
-        ->get();
+        ->get();*/
+        
+        $date = Carbon::now();
+        $date = $date->format('Y-m-d');
+        // Retrieve all posts that have three or more comments...
+        $proyectoactuals = Proyecto::whereDate('fechafin','>=',$date)->get();
+
         return view('proyectos.actualindex',['proyectoactuals'=>$proyectoactuals]);
-        //return view('proyectos.actualindex');
     }
 
     /**
