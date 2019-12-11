@@ -30,7 +30,7 @@
     <th>Colabora en: </th>
     <td>
       @foreach($empleadoInfo->proyectos as $proyecto)
-      <a href="{{route('proyectos.proyecto', $proyecto->id)}}">{{$proyecto->nombre}}</a>,
+      <a href="{{route('proyectos.proyecto', $proyecto->id)}}">{{$proyecto->nombre}}</a>
       @endforeach
     </td>
   </tr>

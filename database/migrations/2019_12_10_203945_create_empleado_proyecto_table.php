@@ -13,7 +13,7 @@ class CreateEmpleadoProyectoTable extends Migration
      */
     public function up()
     {
-        Schema::create('empleado_proyectos', function (Blueprint $table) {
+        Schema::create('empleado_proyecto', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('empleado_id');
             $table->unsignedBigInteger('proyecto_id');
