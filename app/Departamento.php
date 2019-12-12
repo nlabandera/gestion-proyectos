@@ -18,7 +18,7 @@ class Departamento extends Model
 
     public function jefe(){
 
-    	return $this->belongsTo('App\Empleado');
+    	return $this->belongsTo('App\Empleado','empleado_id');
     
     }
 }

@@ -20,6 +20,6 @@ class Empleado extends Model
     	return $this->belongsToMany('App\Proyecto');
     }
     public function jefede(){
-        return $this->hasOne('App\Departamento');
+        return $this->hasOne('App\Departamento','empleado_id');
     }
 }

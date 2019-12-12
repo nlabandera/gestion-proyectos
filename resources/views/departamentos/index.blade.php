@@ -17,7 +17,7 @@
       <td><a href="{{route('departamentos.departamento',$departamento->id)}}">{{$departamento->id}}</a></td>
       <td>{{$departamento->nombre}}</td>
       @if(!is_null($departamento->jefe))
-      <td><a href="{{route('empleados.empleado',$departamento->jefe->id)}}">{{$departamento->jefe->id}}</a></td>
+      <td><a href="{{route('empleados.empleado',$departamento->jefe->id)}}">{{$departamento->jefe->nombre}} {{$departamento->jefe->apellido}}</a></td>
       @endif
     </tr>
     @endforeach

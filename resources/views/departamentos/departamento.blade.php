@@ -17,7 +17,7 @@
 @if(!is_null($dpto->jefe))
 
 <a href="{{route('empleados.empleado',$dpto->jefe->id)}}">
-	<span>{{$dpto->jefe->nombre}}</span>
+	<span>{{$dpto->jefe->nombre}} {{$dpto->jefe->apellido}}</span>
 </a>
 @endif
 
