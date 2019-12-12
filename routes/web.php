@@ -14,6 +14,12 @@
 Route::get('/', function () {
     return view('/layouts/app');
 });
+
+Route::get('listados',function(){
+	return view ('/layouts/listados');
+})->name('layouts.listados');
+
+
 // Empleados
 Route::get('empleados','EmpleadoController@index')->name('empleados.index');
 Route::get('empleados/{id}','EmpleadoController@show')->name('empleados.empleado');

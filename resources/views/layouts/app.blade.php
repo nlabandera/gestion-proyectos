@@ -36,7 +36,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('departamentos.index')}}">Departamentos</a>
                 </li>
-                <li class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+                <!--
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('layouts.listados')}}">Listados</a>
+                </li>
+              -->
+                <li class="dropdown"><a class="dropdown-toggle text-white" data-toggle="dropdown" href="#">Listados<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <li><a href="{{route('proyectos.actualindex')}}">Proyectos actuales</a></li>
                       <li><a href="#">Empleados sin proyectos</a></li>
