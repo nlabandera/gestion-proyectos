@@ -71,13 +71,21 @@ class ProyectoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(ProyectoRequest $request, $id)
+    public function update(Request $request, $id)
     {
         // Busca
         
         $proyectoupdate = Proyecto::find($id);
         
         // Actualiza
+        $request->validate([
+            'titulo'=>'required|min:2|max:45|regex:/[a-zA-Z+\s]/',
+            'fechainicio'=>'required|date',
+            'fechafin' => 'required|date|after:fechainicio',
+            'horasestimadas' => 'required|numeric',
+            'empleado_id' => 'required|min:1|max:10|numeric'
+        ]);
+
         
         $proyectoupdate->titulo = $request->input('titulo');
         $proyectoupdate->fechainicio = $request->input('fechainicio');
