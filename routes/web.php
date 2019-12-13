@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('/layouts/app');
 });
 
-Route::get('listados',function(){
+/*Route::get('listados',function(){
 	return view ('/layouts/listados');
-})->name('layouts.listados');
+})->name('layouts.listados');*/
 
 
 // Empleados
@@ -40,7 +40,7 @@ Route::get('proyectos/proyecto/{id}/edit','ProyectoController@edit')->name('proy
 Route::put('proyectos/proyecto/{id}','ProyectoController@update')->name('proyectos.update');
 
 //Proyectos actuales
-Route::get('proyectosactuales','ProyectoActualController@index')->name('proyectos.actualindex');
+Route::get('listados/actuales','ProyectoController@actual')->name('proyectos.actual');
 
 //Departamentos
 Route::get('departamentos','DepartamentoController@index')->name('departamentos.index');

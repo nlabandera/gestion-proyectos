@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Proyecto;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ProyectoRequest;
+use Carbon\Carbon;
 
 class ProyectoController extends Controller
 {
@@ -20,6 +21,13 @@ class ProyectoController extends Controller
         $proyectoshow = Proyecto::find($id);
 
     	return view('proyectos.proyecto',['proyectoshow'=>$proyectoshow]);
+    }
+    public function actual(){
+        $date = Carbon::now();
+        $date = $date->format('Y-m-d');
+        $proyectoactuals = Proyecto::whereDate('fechafin','>=',$date)->get();
+
+        return view('proyectos.actual',['proyectoactuals'=>$proyectoactuals]);
     }
 
     public function create()
